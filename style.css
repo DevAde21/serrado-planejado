@@ -1,0 +1,207 @@
+/* reset e box-sizing */
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* adiciona rolagem suave em todas as páginas */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: "Sweet Gothic Light", sans-serif;
+    background: linear-gradient(to right, #11b411, #005200);
+}
+
+header {
+    background: linear-gradient(to right, #008300, #003d00);
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 65px;
+}
+
+.logo-text {
+    color: white;
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a.active {
+    color: #cbdb26;
+}
+
+main {
+    height: 2000px;
+    padding-top: 85px;
+    position: relative;
+}
+
+.content-box {
+    background-color: #f0f0f0;
+    width: 1100px;
+    height: 600px;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* garantir que o overflow esteja escondido */
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out; /* transição para suavizar o slide */
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    transform: translateX(0);
+}
+
+.carousel-item-hidden {
+  transform: translateX(-100%);
+}
+
+.carousel-item-active {
+  transform: translateX(0);
+}
+
+.right-box {
+    background-color: #dae7dd;
+    height: 600px;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    left: 1070px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+     margin-top: -15px;
+}
+
+.title {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 2px;
+}
+
+.body-text {
+    font-size: 18px;
+    color: #05621c;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+
+.line-image {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 7px;
+    pointer-events: none;
+}
+
+.budget-content {
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.budget-button {
+  width: 175px;
+  height:80px;
+  border: 3px solid #05621c; /* nova cor da borda */
+  border-radius: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: #05621c; /* nova cor de fundo inicial */
+  font-size: 1.2em;
+  font-weight: 550;
+  color: white; /* nova cor da fonte */
+  margin-top: 20px; /* botão para baixo */
+}
+
+.budget-button:hover {
+  background: #00ad00; /* nova cor de fundo no hover */
+  border: 3px solid #00ad00;
+}
+
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
